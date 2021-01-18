@@ -1,6 +1,8 @@
 <?php
 
 require_once 'User.php';
+
+
 class Employment extends User {
     public $employment;
 
@@ -20,6 +22,8 @@ class Employment extends User {
     public function getCheck(){
         return $this->age;
     }
+
+
 
 }
 ?>
