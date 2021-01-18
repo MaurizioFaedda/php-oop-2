@@ -11,16 +11,16 @@ class User {
 
     }
 
-    public function setEmail($_mail){
+    public function setCheck($_mail){
         if (!filter_var($_mail, FILTER_VALIDATE_EMAIL)) {
-            
+
           throw new Exception('Is not a valid email');
         }
 
         return $this->mail = $_mail;
     }
 
-    public function getEmail(){
+    public function getCheck(){
         return $this->mail;
     }
 }
