@@ -8,7 +8,19 @@ class User {
     function __construct($_name, $_lastname) {
         $this->name = $_name;
         $this->lastname = $_lastname;
-    
+
+    }
+
+    public function setEmail($_mail){
+        if (!filter_var($_mail, FILTER_VALIDATE_EMAIL)) {
+          throw new Expection('Is not a valid email');
+        }
+
+        return $this->mail = $_mail;
+    }
+
+    public function getEmail(){
+        return $this->mail;
     }
 }
 ?>
