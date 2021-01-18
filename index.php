@@ -6,8 +6,8 @@ $user1 = new User('Maurizio', 'Faedda');
 try {
     $user1 -> setEmail('mauriziogmail.com');
     $mail =  $user1->getEmail();
-} catch (Expection $e){
-    echo $e->getMessage();
+} catch (Exception $e){
+    echo $user1->name ." ". $user1->lastname."'s ".$e->getMessage();
 }
 
 var_dump($user1);

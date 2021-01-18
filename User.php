@@ -13,7 +13,8 @@ class User {
 
     public function setEmail($_mail){
         if (!filter_var($_mail, FILTER_VALIDATE_EMAIL)) {
-          throw new Expection('Is not a valid email');
+            
+          throw new Exception('Is not a valid email');
         }
 
         return $this->mail = $_mail;
